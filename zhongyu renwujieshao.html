@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介绍</title>
+    <link rel="stylesheet" href="./css/daohang.css" />
+    <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+     
+    }
+    .card{
+      position: relative;
+      width: 45%;
+      height: 450px;
+      margin: 20px;
+      background-color: antiquewhite;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: black;
+      box-shadow: 0 0 30px rgba(red, green, blue, alpha);
+      /*不被挤压*/
+      flex-shrink: 0;
+     }
+    .card .zhaopian img{
+      width: 100%;
+      height: 100%;
+      /*缩放填充*/
+      object-fit: cover;
+    }
+    .card .zhaopian{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      border-radius: 0%;
+      overflow: hidden;
+      transform: 0.5s;
+     }
+     .card:hover .zhaopian{
+      top: 30px;
+      width:128px;
+      height: 128px;
+      border-radius: 50%;
+      box-shadow: 0 0 300px rgba(red, green, blue, 0.5);
+     }
+     /*渐变背景*/
+     .card .zhaopian::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom,transparent 80%,#223);
+     }
+     .card h1{
+      position: absolute;
+      top: 400px;
+      transition: 0.5s;
+      color:aquamarine;
+     }
+     .card:hover h1{
+      top: 170px;
+     }
+     .card h2{
+      margin-top: 220px;
+      width: 80%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+     }
+     .card h3{
+      width: 100%;
+      text-indent: 50px;
+      font-size: 16px;
+     }
+/* 底部 */
+
+      .Footer_titles{
+          height:  50px;
+          background-color:  aqua ;
+          width: 100%;
+          font-size: 15px;
+          font-weight: bold;
+          color: black;
+          text-align: center;
+      }
+  
+          
+    </style>
+</head>
+<body>
+  <div class="nav">
+    <ul class="navlist">
+        <li class="b"><a href="./zhongyu zhuye.html">网站主页</a></li>
+        <li class="b"><a href="./zhongyu jianjie5.html">详细简介</a>
+          <ul class="xiala">
+              <li ><a href="">剧集介绍</a></li>
+              <li ><a href="">电影推荐</a></li>
+            </ul>
+        </li>      
+        <li class="b"><a href="./zhongyu renwujieshao.html">人物介绍</a>
+          <ul class="xiala">
+            <li ><a href="">一家大全</a></li>
+            <li ><a href="">朋友大全</a></li>
+          </ul>
+        </li>
+        <li class="b"><a href="./zhongyu women.html">登录/注册</a>
+          <ul class="xiala">
+            <li ><a href="">关于我们</a></li>
+          </ul>
+        </li> 
+      </ul>            
+  </div>
+     <!-- banner -->
+    <div class="card-container">
+      <div class="card">
+          <div class="zhaopian">
+            <img src="./tupian/labi.jpg" alt="">
+          </div>
+            <h1>
+              野原新之助
+            </h1>
+            <h2>
+            <li> 年龄： 5岁</li>
+            <li>身高：1.1米</li>
+            <li>体重：22.8kg</li>
+            </h2>
+            <h3>
+              特长爱好：跳草裙舞，喜欢动感超人、康达姆机器人，爱吃克力饼干、纳豆拌饭等.
+            </h3>
+            <a href="#">了解更多</a>
+      </div>
+        <div class="card">
+          <div class="zhaopian">
+            <img src="./tupian/meiya.jpg" alt="">
+          </div>
+            <h1>
+              野原美伢
+            </h1>
+            <h2>
+              <li>野原广志之妻</li><li>小新与小葵的母亲</li><li>家庭主妇</li>
+            <h3>
+              好面子，不认输，善良，但脾气暴躁，做事一团糟，犯错有时死不承认，受不了别人的甜言蜜语.
+            </h3>
+            <a href="#">了解更多</a>
+      </div>
+      <div class="card">
+          <div class="zhaopian">
+            <img src="./tupian/guabfzhi.jpg" alt="">
+          </div>
+            <h1>
+              野原广志
+            </h1>
+            <h2>
+              35岁，秋田出身，在公司工作，是家里的顶梁柱.
+            </h2>
+            <h3>
+              性格随和，有些好色，脚有异常的气味，常被小新调侃.
+            </h3>
+            <a href="#">了解更多</a>
+      </div>
+      <div class="card">
+        <div class="zhaopian">
+          <img src="./baise/feng.jpg" alt="">
+        </div>
+          <h1>
+            风间彻
+          </h1>
+          <h2>
+            向日葵班学生，家境富有，有礼貌，学习成绩好.
+          </h2>
+          <h3>
+            有点装腔作势，自尊心高，但也有温柔的一面，有轻微异装癖，身体敏感
+          </h3>
+          <a href="#">了解更多</a>
+    </div>
+    </div>
+     <div class="Footer"> 
+          <div class="Footer_titles">欢迎进入蜡笔小新</div>
+    </div>
+</body>
+</html>

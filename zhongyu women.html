@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜡笔小新</title>
+    <link rel="stylesheet" href="css\daohang.css" />
+    <style>
+        body{
+          height: 100%;
+          margin: 0;
+        }
+        .bigbox{
+          display: flex;
+          width: 100%;
+          height: 1000px;
+          justify-content: center;
+          flex-wrap: wrap;
+          place-items: center;
+          background-image: url(./baise/背景.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
+        }
+        .neibox{
+          width: 600px;
+          height: 400px;
+          background-color: #fff;
+          position: absolute;
+        }
+        .from-box{
+          position: absolute;
+          top: -10%;
+          left: 5%;
+          background-color:aqua;
+          width: 320px;
+          height: 500px;
+          border-radius: 5px;
+          box-shadow: 2px 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          transition: 0.5s ease-in-out;
+        }
+        .bigbox h1{
+          font-size: 50px;
+          color:black;
+          /* 下边框 大写字母 字间距*/
+          margin-bottom: 25px;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          justify-content: center;
+          text-align: center;
+          font-family:cursive;
+          background: linear-gradient(to right,rgb(4, 235, 235),rgb(172, 169, 169));
+          background-clip: text;
+          color:transparent;
+        }
+        .inputtext,.register-box{
+          width: 100%;
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: absolute;
+        }
+        .hidden{
+          display: none;
+          transition: 0.5s;
+        }
+        input {
+          background-color:transparent;
+          width: 70%;
+          color: #fff;
+          border: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+          border-radius: 5px; /* 圆角 */
+          padding: 10px 0;
+          text-indent: 10px;
+          margin: 8px 0;
+          font-size: 14px;
+          letter-spacing: 2px;
+        }
+        input::placeholder{
+          color: white;
+        }
+        input:focus{
+         color: white;
+         outline: none;
+         border-bottom: 1px solid;
+         transition: 0.5s;
+        }
+       input:focus::placeholder{
+          opacity: 0;
+       }
+       .from-box button{
+          width: 70%;
+          margin-top: 35px;
+          background: #fff;
+          outline: none;
+          border-radius: 8px;
+          padding: 13px;
+          color: aquamarine;
+          letter-spacing: 2px;
+          border: none;
+          cursor: pointer;
+       }
+       .from-box button:hover{
+          background: linear-gradient(to right,rgb(4, 235, 235),rgb(172, 169, 169));
+          color: black;
+          transition: background-color;
+       }
+       .box{
+           width: 50%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           position: absolute;
+           top: 50%;
+           transform: translateY(-50%);
+       }
+       .box.left{
+          background-image: url(./baise/women3.jpg);
+          background-size: cover;
+          width: 300px;
+          height: 430px;
+          border-radius: 10px;
+       }
+       .box.right{
+          right: -50px;
+          background-image: url(./baise/womne2.jpg);
+          background-size: cover;
+          width: 300px;
+          height: 430px;
+          border-radius: 10px;
+       }
+       .box.right h2{
+        top: 50px;
+        color: aquamarine;
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+       }
+       .box.left h2{
+        top: 120px;
+        color: aquamarine;
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+       }
+       .box p{
+        color:black;
+        letter-spacing: 12px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-align: center;
+        padding-top: 370px;
+       }
+       .box span{
+        color:rgb(16, 255, 255);
+        font-weight: bold;
+       }
+       .neibox img{
+        width: 300px;
+        height: 300px;
+        opacity: 0.9;
+       }
+    </style>
+</head>
+<body>
+  <div class="nav">
+    <ul class="navlist">
+        <li class="b"><a href="./zhongyu zhuye.html">网站主页</a></li>
+        <li class="b"><a href="./zhongyu jianjie5.html">详细简介</a>
+          <ul class="xiala">
+              <li ><a href="">剧集介绍</a></li>
+              <li ><a href="">电影推荐</a></li>
+            </ul>
+        </li>      
+        <li class="b"><a href="./zhongyu renwujieshao.html">人物介绍</a>
+          <ul class="xiala">
+            <li ><a href="">一家大全</a></li>
+            <li ><a href="">朋友大全</a></li>
+          </ul>
+        </li>
+        <li class="b"><a href="./zhongyu women.html">登录/注册</a>
+          <ul class="xiala">
+            <li ><a href="">关于我们</a></li>
+          </ul>
+        </li> 
+      </ul>            
+  </div>
+    <div class="bigbox">
+        <div class="neibox">
+          <div class="from-box">
+              <div class="inputtext" >
+                  <h1>login</h1>
+                  <input type="text"  placeholder="请输入用户名" autofocus>
+                  <br>   
+                  <input type="password" placeholder="请输入密码" autofocus>
+                  <button>登录</button>
+              </div>
+              <div class="register-box hidden">
+                  <h1>register</h1>
+                  <input type="text" placeholder="用户名">
+                  <input type="email" placeholder="邮箱">
+                  <input type="password" placeholder="密码">
+                  <button>注册</button>
+                </div>
+          </div>
+          <div class="box left">
+              <h2>欢迎加入 <span>蜡笔小新</span></h2>
+              <p>已有账号?</p>
+              <button id="login">去登陆</button>
+          </div>
+          <div class="box right">
+              <h2>欢迎登录 <span>蜡笔小新</span></h2>
+              <p>没有账号?</p>
+              <button id="register">去注册</button>
+        </div>
+      </div>
+    </div>
+    <div class="Footer"> 
+      <div class="Footer_titles">欢迎进入蜡笔小新,本站归属所有</div>
+    </div>
+    <script>
+      let login=document.getElementById("login");
+      let register=document.getElementById("register");
+      let  inputtext=document.querySelector(".inputtext");
+      let  register_box = document.querySelector(".register-box");
+      let  from_box= document.querySelector(".from-box");
+      login.addEventListener('click',()=>{
+        from_box.style.transform='translateX(0%)';
+        register_box.classList.add('hidden');
+        inputtext.classList.remove('hidden');
+      })
+      register.addEventListener('click',()=>{
+        from_box.style.transform='translateX(80%)';
+        inputtext.classList.add('hidden');
+        register_box.classList.remove('hidden');
+      })
+    </script>
+</body>
+</html>
